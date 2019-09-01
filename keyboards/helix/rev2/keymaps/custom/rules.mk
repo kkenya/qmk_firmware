@@ -29,14 +29,22 @@ endef
 # Helix keyboard customize
 # you can edit follows 7 Variables
 #  jp: 以下の7つの変数を必要に応じて編集します。
-HELIX_ROWS = 5              # Helix Rows is 4 or 5
-OLED_ENABLE = no            # OLED_ENABLE
-LOCAL_GLCDFONT = no         # use each keymaps "helixfont.h" insted of "common/glcdfont.c"
-LED_BACK_ENABLE = no        # LED backlight (Enable WS2812 RGB underlight.)
-LED_UNDERGLOW_ENABLE = no   # LED underglow (Enable WS2812 RGB underlight.)
-LED_ANIMATIONS = yes        # LED animations
-IOS_DEVICE_ENABLE = no      # connect to IOS device (iPad,iPhone)
-Link_Time_Optimization = no # if firmware size over limit, try this option
+# Helix Rows is 4 or 5
+HELIX_ROWS = 5
+# OLED_ENABLE
+OLED_ENABLE = yes
+# use each keymaps "helixfont.h" insted of "common/glcdfont.c"
+LOCAL_GLCDFONT = no
+# LED backlight (Enable WS2812 RGB underlight.)
+LED_BACK_ENABLE = yes
+# LED underglow (Enable WS2812 RGB underlight.)
+LED_UNDERGLOW_ENABLE = no
+# LED animations
+LED_ANIMATIONS = yes
+# connect to IOS device (iPad,iPhone)
+IOS_DEVICE_ENABLE = no
+# if firmware size over limit, try this option
+Link_Time_Optimization = no
 
 ####  LED_BACK_ENABLE and LED_UNDERGLOW_ENABLE.
 ####    Do not enable these with audio at the same time.
@@ -72,8 +80,8 @@ endif
 
 # Uncomment these for checking
 #   jp: コンパイル時にカスタマイズの状態を表示したい時はコメントをはずします。
-# $(eval $(call HELIX_CUSTOMISE_MSG))
-# $(info )
+$(eval $(call HELIX_CUSTOMISE_MSG))
+$(info )
 
 ifneq ($(strip $(HELIX_ROWS)), 4)
   ifneq ($(strip $(HELIX_ROWS)), 5)
