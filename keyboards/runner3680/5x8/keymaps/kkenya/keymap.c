@@ -25,25 +25,25 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     /* QWERTY
-     * ビルドを間違えたため左右反転
+     * ビルドを間違えたため各キーボードのキー配列を左右反転
      * ,-------------------------------------------------------.                    ,--------------------------------------------------------.
-     * |  F1  |  F2  |   5  |   4  |   3  |   2  |   1  | Esc  |                    | Bksp |   =  |   -  |   0  |   9  |   8  |   7  |   6  |
+     * |      |      |   5  |   4  |   3  |   2  |   1  | Esc  |                    | Bksp |   =  |   -  |   0  |   9  |   8  |   7  |   6  |
      * |------+------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------+------|
-     * |  F3  |  F4  |   T  |   R  |   E  |   W  |   Q  | Tab  |                    |   \  |   ]  |   [  |   P  |   O  |   I  |   U  |   Y  |
+     * |      |      |   T  |   R  |   E  |   W  |   Q  | Tab  |                    |   \  |   ]  |   [  |   P  |   O  |   I  |   U  |   Y  |
      * |------+------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------+------|
-     * |  F5  |  F6  |   G  |   F  |   D  |   S  |   A  | Ctrl |                    | Enter| Enter|   "  |   ;  |   L  |   K  |   J  |   H  |
+     * |      |      |   G  |   F  |   D  |   S  |   A  | Ctrl |                    | Enter| Enter|   "  |   ;  |   L  |   K  |   J  |   H  |
      * |------+------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------+------|
-     * |  F7  |  F8  |   B  |   V  |   C  |   X  |   Z  | Shift|                    | Shift|Adjust| Shift|   /  |   .  |   ,  |   M  |   N  |
+     * |      |      |   B  |   V  |   C  |   X  |   Z  | Shift|                    |Adjust| Shift| Shift|   /  |   .  |   ,  |   M  |   N  |
      * |------+------+------+------+------+------+------+------|                    |------+------+------+------+------+------+------+------|
-     * |  F9  |  F10 | Space| Space| GUI  | Alt  | GUI  |   `  |                    | Right|  Up  | Down | Left | Alt  | GUI  | Space| Space|
+     * |      |      | Space| Space| GUI  | Alt  | GUI  |   `  |                    | Right|  Up  | Down | Left | Alt  | GUI  | Space| Enter|
      * `-------------------------------------------------------'                    `-------------------------------------------------------'
      */
   [_QWERTY] = LAYOUT(
-      _______, _______, KC_5,   KC_4,   KC_3,    KC_2,       KC_1,     KC_ESC,      KC_BSPC,  KC_EQL,  KC_MINS, KC_0,     KC_9,    KC_8,    KC_7,    KC_6,  
-      _______, _______, KC_T,   KC_R,   KC_E,    KC_W,       KC_Q,     KC_TAB,      KC_BSLS,  KC_RBRC, KC_LBRC, KC_P,     KC_O,    KC_I,    KC_U,    KC_Y,  
-      _______, _______, KC_G,   KC_F,   KC_D,    KC_S,       KC_A,     KC_LCTL,     KC_ENT,   KC_ENT,  KC_QUOT, KC_SCLN,  KC_L,    KC_K,    KC_J,    KC_H,  
-      _______, _______, KC_B,   KC_V,   KC_C,    KC_X,       KC_Z,     KC_LSFT,     KC_RSFT,  ADJUST,  KC_RSFT, KC_SLSH,  KC_DOT,  KC_COMM, KC_M,    KC_N,  
-      _______, _______, KC_SPC, KC_SPC, KC_LGUI, KC_LALT,    KC_LGUI,  KC_GRV,      KC_RGHT,  KC_UP,   KC_DOWN, KC_LEFT,  KC_LALT, KC_LGUI, KC_SPC,  KC_SPC
+      KC_ESC, KC_ESC, KC_5,   KC_4,   KC_3,    KC_2,       KC_1,     KC_ESC,      KC_BSPC,  KC_EQL,  KC_MINS, KC_0,     KC_9,    KC_8,    KC_7,    KC_6,  
+      KC_ESC, KC_ESC, KC_T,   KC_R,   KC_E,    KC_W,       KC_Q,     KC_TAB,      KC_BSLS,  KC_RBRC, KC_LBRC, KC_P,     KC_O,    KC_I,    KC_U,    KC_Y,  
+      KC_ESC, KC_ESC, KC_G,   KC_F,   KC_D,    KC_S,       KC_A,     KC_LCTL,     KC_ENT,   KC_ENT,  KC_QUOT, KC_SCLN,  KC_L,    KC_K,    KC_J,    KC_H,  
+      KC_ESC, KC_ESC, KC_B,   KC_V,   KC_C,    KC_X,       KC_Z,     KC_LSFT,     ADJUST,   KC_RSFT, KC_RSFT, KC_SLSH,  KC_DOT,  KC_COMM, KC_M,    KC_N,  
+      KC_ESC, KC_ESC, KC_SPC, KC_SPC, KC_LGUI, KC_LALT,    KC_LGUI,  KC_GRV,      KC_RGHT,  KC_UP,   KC_DOWN, KC_LEFT,  KC_RALT, KC_RGUI, KC_SPC,  KC_ENT
       ),
 
     /* Adjust
